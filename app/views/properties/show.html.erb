@@ -1,59 +1,60 @@
-<p id="notice"><%= notice %></p>
+<b><h1>Property Detail</h1></b>
 
 <p>
-  <strong>Property:</strong>
+  <weak>Property:</weak>
   <%= @property.property %>
 </p>
 
 <p>
-  <strong>Rent:</strong>
+  <weak>Rent:</weak>
   <%= @property.rent %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <weak>Address:</weak>
   <%= @property.address %>
 </p>
 
 <p>
-  <strong>Building age:</strong>
+  <weak>Building age:</weak>
   <%= @property.building_age %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <weak>Remarks:</weak>
   <%= @property.remarks %>
 </p>
-
+<hr>
+<b><h2>Nearest Station1</h1></b>
 <p>
-  <strong>Name of railway line:</strong>
+  <weak>Name of railway line:</weak>
   <%= @property.name_of_railway_line %>
 </p>
 
 <p>
-  <strong>Station name:</strong>
+  <weak>Station name:</weak>
   <%= @property.station_name %>
 </p>
 
 <p>
-  <strong>How many minutes walk:</strong>
+  <weak>How many minutes walk:</weak>
   <%= @property.how_many_minutes_walk %>
 </p>
-
+<b><h2>Nearest Station2</h1></b>
 <p>
-  <strong>Name of railway line:</strong>
+  <weak>Name of railway line:</weak>
   <%= @property.name_of_rail_way_line %>
 </p>
 
 <p>
-  <strong>Station name:</strong>
+  <weak>Station name:</weak>
   <%= @property.stationname %>
 </p>
 
 <p>
-  <strong>How many minutes walk:</strong>
+  <weak>How many minutes walk:</weak>
   <%= @property.how_many_minute_walk %>
 </p>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Edit property information', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

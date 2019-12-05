@@ -1,60 +1,53 @@
-<b><h1>Property Detail</h1></b>
+<p id="notice"><%= notice %></p>
 
+<h1><b>Property Details</b></h1><hr>
 <p>
-  <weak>Property:</weak>
+  <strong>Property:</strong>
   <%= @property.property %>
 </p>
 
 <p>
-  <weak>Rent:</weak>
+  <strong>Rent:</strong>
   <%= @property.rent %>
 </p>
 
 <p>
-  <weak>Address:</weak>
+  <strong>Address:</strong>
   <%= @property.address %>
 </p>
 
 <p>
-  <weak>Building age:</weak>
+  <strong>Building age:</strong>
   <%= @property.building_age %>
 </p>
 
 <p>
-  <weak>Remarks:</weak>
+  <strong>Remarks:</strong>
   <%= @property.remarks %>
 </p>
-<hr>
-<b><h2>Nearest Station1</h1></b>
-<p>
-  <weak>Name of railway line:</weak>
-  <%= @property.name_of_railway_line %>
-</p>
+</div><hr>
 
-<p>
-  <weak>Station name:</weak>
-  <%= @property.station_name %>
-</p>
+ 
+<% @property.stations.each do |property| %>
+  <% if @property.id == property.property_id %>
+    <h2><b>Nearest station </b></h2>
+    <p>
+      <strong>Name of railway line:</strong>
+      <%= property.name_of_railway_line %>
+    </p>
 
-<p>
-  <weak>How many minutes walk:</weak>
-  <%= @property.how_many_minutes_walk %>
-</p>
-<b><h2>Nearest Station2</h1></b>
-<p>
-  <weak>Name of railway line:</weak>
-  <%= @property.name_of_rail_way_line %>
-</p>
+    <p>
+      <strong>Statation name:</strong>
+      <%= property.statation_name %>
+    </p>
 
-<p>
-  <weak>Station name:</weak>
-  <%= @property.stationname %>
-</p>
-
-<p>
-  <weak>How many minutes walk:</weak>
-  <%= @property.how_many_minute_walk %>
-</p>
-
-<%= link_to 'Edit property information', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+    <p>
+      <strong>How many minutes walks:</strong>
+      <%= property.how_many_minutes_walks %>
+    </p>
+  <% end %>
+<% end %>
+<div class="links">
+  <%= link_to 'Edit property information', edit_property_path(@property) %> |
+  <%= link_to 'Back', properties_path %>
+</div>

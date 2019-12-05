@@ -12,60 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :property %>
+    <%= f.label :property %><br>
     <%= f.text_field :property %>
   </div>
 
   <div class="field">
-    <%= f.label :rent %>
+    <%= f.label :rent %><br>
     <%= f.text_field :rent %>
   </div>
 
   <div class="field">
-    <%= f.label :address %>
+    <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
 
   <div class="field">
-    <%= f.label :building_age %>
-    <%= f.text_field :building_age %>
+    <%= f.label :building_age %><br>
+    <%= f.number_field :building_age %>
   </div>
 
   <div class="field">
-    <%= f.label :remarks %>
+    <%= f.label :remarks %><br>
     <%= f.text_area :remarks %>
-  </div>
- <h2>Name of railway line 1</h2>
-  <div class="field">
-    <%= f.label :name_of_railway_line %>
-    <%= f.text_field :name_of_railway_line %>
-  </div>
+  </div><hr>
+  <%= f.fields_for :stations do |s| %>
+   <h2>Name of railway line 1</h2>
+   <div class="field">
+     <%= s.label :name_of_railway_line %><br>
+     <%= s.text_field :name_of_railway_line %>
+   </div>
 
-  <div class="field">
-    <%= f.label :station_name %>
-    <%= f.text_field :station_name %>
-  </div>
+    <div class="field">
+      <%= s.label :statation_name %><br>
+      <%= s.text_field :statation_name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :how_many_minutes_walk %>
-    <%= f.text_field :how_many_minutes_walk %>
-  </div>
-  <h2>Name of railway line 2</h2>
-  <div class="field">
-    <%= f.label :name_of_railway_line %>
-    <%= f.text_field :name_of_rail_way_line %>
-  </div>
-
-  <div class="field">
-    <%= f.label :station_name %>
-    <%= f.text_field :stationname %>
-  </div>
-
-  <div class="field">
-    <%= f.label :how_many_minutes_walk %>
-    <%= f.text_field :how_many_minute_walk %>
-  </div>
-
+    <div class="field">
+      <%= s.label :how_many_minutes_walks %><br>
+      <%= s.number_field :how_many_minutes_walks %>
+    </div>
+    
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
